@@ -34,9 +34,9 @@ git commit 之後在.git/ref/heads 裡面多出一個main裡面記錄這一個co
 在新增檔案後，於br2 git add 與commit ，裡面記錄的內容變成了新的了，且在.git/HEAD記錄的內容也變成了refs/heads/br2
 
 此外使用git cat-file -p 可以直接查詢以SHA-1命名的一組資料夾跟檔案裡面的內容是什麼：
-blob:某個檔案的內容
-tree: <file_mode> <指向的blob或是tree等等其他> <該檔案名稱>
-commit: 該commit指向的tree的SHA-1 ，commit的parent，誰commit的，commit人建立的檔案
+blob:某個檔案的內容 
+tree: <file_mode> <指向的blob或是tree等等其他> <該檔案名稱> 
+commit: 該commit指向的tree的SHA-1 ，commit的parent，誰commit的，commit人建立的檔案 
 
 所以只要把這些git cat-file -p 查詢到的串連起來，就可以畫出像是上圖的效果
 ##  commit message 應該怎麼寫比較好？應該有什麼 `style` 嗎？
