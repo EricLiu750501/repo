@@ -27,7 +27,7 @@ git checkout 就是改變head指到的branch
 git commit 之後在.git/ref/heads 裡面多出一個main裡面記錄這一個commit，另外在.git/HEAD檔案內紀錄著：ref: refs/heads/main。
 
 也可以應證：HEAD會指向branch然後指向commit
-![[image/relationship.png]]
+![](image/relationship.png)
 [https://github.com/doggy8088/Learn-Git-in-30-days/blob/master/zh-tw/figures/06/04.png]
 
 接著我多加了一個branch 叫做br2，switch到br2，而refs/heads/多了一個br2的檔案，裡面記錄的檔案竟是跟main一樣的commit，推測是因為還沒commit過所以指向與main分支一樣的方向，
