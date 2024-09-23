@@ -39,7 +39,7 @@ export default class Stack {
 
     // 返回 stack 中元素的個數
     size() {
-        return this.#items.length-1;
+        return this.#items.length;
     }
 
     // 清空 stack 
@@ -55,7 +55,11 @@ export default class Stack {
             console.log("Stack is empty")
         }
         else {
-            this.#items.forEach(ele => console.log(ele));
+            console.log("Stack Print")
+            for (let i=this.size()-1;i>=0;i--) {
+                console.log("|   ", String(this.#items[i]).padEnd(4, ' '), "|");
+            }
+            console.log("-----------")
         }
     }
 }
