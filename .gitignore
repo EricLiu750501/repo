@@ -1,0 +1,8 @@
+.DS_Store
+
+.obsidian
+
+.env
+
+node_modules/
+
