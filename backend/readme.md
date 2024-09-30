@@ -213,16 +213,13 @@ localhost 是一個主機名稱，IP是 127.0.0.1 也就是會連到自己的電
 Curl 是一個[開源專案](https://github.com/curl/curl) 上用來透過 HTTP Protocol（HTTP HyperText Transfer Protocol 定義存取網路資源的協定，讓我們可以使用 client / server 模式來取得網路資源）下載和上傳檔案的指令
 
 常用參數：
-`-L / --location` : 如果HTTP 重新定位(301/302 redirect) curl 也會跟著他
-`--remote-name` : 下載檔案,保留遠端檔案的檔名
-`--dump-header <file>` : 把header資訊寫入到file中
-`--cert <憑證:密碼>`, `--cert-type <憑證的類型>` : 如果需要憑證與密碼
-`--verbose` : 吐出更多訊息分辨 debug 用
-`--data <資料或 json 等>` : 
-`-X或--request [GET|POST|PUT|DELETE|PATCH]`  使用指定的 http method 來發出 http request
-
-
-
+`-L / --location` : 如果HTTP 重新定位(301/302 redirect) curl 也會跟著他  
+`--remote-name` : 下載檔案,保留遠端檔案的檔名  
+`--dump-header <file>` : 把header資訊寫入到file中  
+`--cert <憑證:密碼>`, `--cert-type <憑證的類型>` : 如果需要憑證與密碼  
+`--verbose` : 吐出更多訊息分辨 debug 用  
+`--data <資料或 json 等>` :   
+`-X或--request [GET|POST|PUT|DELETE|PATCH]`  使用指定的 http method 來發出 http request  
 
 常用的指令：
 會發送一個HTTP GET request 然後把結果output
