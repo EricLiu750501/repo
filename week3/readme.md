@@ -3,6 +3,7 @@
 - [x] callback
 - [ ] promise
 - [x] express
+- [x] group
 
 
 #### 什麼是 AWS Region, AZ (availability zones)
@@ -10,7 +11,7 @@
 一個aws帳號可以有很多Region，每個Region皆設計為與其他區域隔離。如此可達到最高的容錯能力與穩定性。
     
 
-| 在這張圖可以看到很多Region，代表不同的地區，以期他們右邊的代號 | ![](assets/image2.png) |
+| 在這張圖可以看到很多Region，代表不同的地區，以及他們右邊的代號 | ![](assets/image2.png) |
 | ----------------- | ---------------------- |
 
 Region 與 AZ (availability zones) 的關係如下：  
