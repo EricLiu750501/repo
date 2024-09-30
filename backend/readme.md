@@ -218,14 +218,8 @@ Curl 是一個[開源專案](https://github.com/curl/curl) 上用來透過 HTTP 
 `--dump-header <file>` : 把header資訊寫入到file中  
 `--cert <憑證:密碼>`, `--cert-type <憑證的類型>` : 如果需要憑證與密碼  
 `--verbose` : 吐出更多訊息分辨 debug 用  
-`--data <資料或 json 等>` :   
+`--data <資料或 json 等>` :   附加檔案用
 `-X或--request [GET|POST|PUT|DELETE|PATCH]`  使用指定的 http method 來發出 http request  
-
-常用的指令：
-會發送一個HTTP GET request 然後把結果output
-```
-curl https://example.com
-```
 
 **[tldr](https://github.com/tldr-pages/tldr)提供的範例curl指令**
 ```
