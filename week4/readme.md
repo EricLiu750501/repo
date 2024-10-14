@@ -1,7 +1,7 @@
 **1. 在 Readme 中提供 instance 的 public IP，我會連線過去檢查，所以要保持主機是一直在啟動中**  
 [http://3.106.200.164/](http://3.106.200.164/)  
  
-**2. 什麼是 instance type?**
+**2. 什麼是 instance type?**  
 instance type 是執行 instance 時所使用的主機硬體
 
 我們使用的[*t2.micro*](https://instances.vantage.sh/aws/ec2/t2.micro?region=ap-southeast-2&os=linux&cost_duration=monthly&reserved_term=Standard.noUpfront)的硬體： 
@@ -19,15 +19,14 @@ instance type 是執行 instance 時所使用的主機硬體
 |GPU Compute Capability |	0|
 |FPGA	|0
 
-**3. 什麼是 Nginx？有哪些用途與特性？**
-NGINX (pronounced "engine x" or "en-jin-eks") 是一個非同步框架的 Web server ，有高效率、高穩定性的特性，常用做
-    1. 反向代理伺服器 ( reverse proxy ) 
-    2. 負載平衡器 ( load balancer )  
-    3. HTTP內容快取 ( content cache )   
-    4. TCP/UDP 代理伺服器  ( proxy server )  
-    5. 郵件代理伺服器  ( mail proxy server )
+**3. 什麼是 Nginx？有哪些用途與特性？**  
+NGINX (pronounced "engine x" or "en-jin-eks") 是一個非同步框架的 Web server ，有高效率、高穩定性的特性，常用做  
+    1.   反向代理伺服器 ( reverse proxy )  
+    2.   負載平衡器 ( load balancer )  
+    3.   HTTP內容快取 ( content cache )   
+    4.   TCP/UDP 代理伺服器  ( proxy server )  
+    5.   郵件代理伺服器  ( mail proxy server )
    <p align="right"> <a href="https://nginx.org/en/">參考資料</a> </p>
-
 
 非同步與同步：[參考資料](https://www.thegeekstuff.com/2013/11/nginx-vs-apache/)
 -  同步：對於每個 client ，都有一個完全獨立的 thread 專為他服務， thread 結束後才會釋放資源 (CPU, Memory)，所以一旦 client 變多，沒有相應的資源很容易導致網站卡住 (I/O blocking problems)
@@ -35,20 +34,20 @@ NGINX (pronounced "engine x" or "en-jin-eks") 是一個非同步框架的 Web se
    - 下圖是 Nginx 處理 request 的流程
     <img src="assets/image.png" width="50%">
 
-**4. pm2 套件是什麼？有什麼用處？**
-    **a. 如果不是使用 pm2，那就告訴我你是用哪一個、這個工具的用途，以及，你為什麼這樣選擇**
+**4. pm2 套件是什麼？有什麼用處？**   
+    **a. 如果不是使用 pm2，那就告訴我你是用哪一個、這個工具的用途，以及，你為什麼這樣選擇**  
     pm 是 process manage 的縮寫，所以 pm2 是用來管理 process 的，能夠簡化常見的系統管理任務，如如性能監控、自動重啟、負載均衡等。如果不用pm2也可以使用:
 - forever, Supervisor:輕巧簡便，功能少
 - Nodemon:開發環境適用
 - StrongLoop Process Manager:高功能，很複雜
 - Docker + Docker Compose:要熟docker
 
-**5. 步驟 9 中提到的 `proxy` 是什麼意思？為什麼要透過 Nginx 來 `proxy` 到 Express 開發的 Web Server?**
+**5. 步驟 9 中提到的 `proxy` 是什麼意思？為什麼要透過 Nginx 來 `proxy` 到 Express 開發的 Web Server?**   
     **a. 提示 `Reverse proxy` vs `Forward Proxy`**
 
 proxy 是代理的意思，是一種網路服務，允許一個終端（一般為 client ）通過這個服務與另一個終端（一般為 server ）進行非直接的連接
 如[圖](https://zh.wikipedia.org/zh-tw/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8#/media/File:Schematic_Proxy_Server.svg)中間橘色的電腦代表 proxy 的角色
-<img src="assets/image5.png" width="50%">
+<img src="assets/image5.png" width="50%">   
 在步驟9中，我們透過 nginx 讓 aws 的 ip 可以 proxy 到 express web server 的 `localhost:3000`
 而 proxy 分成 Reverse proxy 與 Forward Proxy 兩種
 |Forward Proxy|Reverse proxy|
@@ -66,52 +65,52 @@ Reverse proxy：
 
 所以透過 Nginx 的 reverse proxy 連到我們的 sever 有安全，效率等的好處
 
-[Source](https://www.youtube.com/watch?v=4NB0NDtOwIQ)
-**6. 在 readme 中提供步驟 9 的 Nginx 設定檔**
-
+[Source](https://www.youtube.com/watch?v=4NB0NDtOwIQ)  
+**6. 在 readme 中提供步驟 9 的 Nginx 設定檔**  
 [Nginx 設定檔](assets/nodeApp)
 利用 scp 直接從上面拉過來
 
-**7. Security Group 是什麼？用途為何？有什麼設定原則嗎？**
+**7. Security Group 是什麼？用途為何？有什麼設定原則嗎？**  
 
 security group 控制可以連進來的人，所以 Security Group: Inbound 22 & 80 port 的意思是控制只有透過port 22 (SSH)和 port 80 (HTTP) 的方式連線才能連進來，是一種防火牆的概念
 
-**8. 什麼是 sudo? 為什麼有的時候需要加上 sudo，有時候不用？**
+**8. 什麼是 sudo? 為什麼有的時候需要加上 sudo，有時候不用？**  
 
 sudo 的 su 是 super user 的意思，可以讓使用者以安全的方式使用特定的權限執行程式
 在做作業時，我發現會需要加上 sudo 的情況大多是會經歷修改檔案的時候需要，或是執行特定指令需要
 <img src="assets/image2.png" width="50%"> 從`ls -l` 來看一般 user 沒有權限<img src="assets/image3.png" width="10%">  
 <img src="assets/image4.png" width="50%"> 不用 sudo 就會 not permitted
 
-**9. Nginx 的 Log 檔案在哪裡？你怎麼找到的？怎麼看 Nginx 的 Log？**
+**9. Nginx 的 Log 檔案在哪裡？你怎麼找到的？怎麼看 Nginx 的 Log？**  
 透過Nginx官網得知 Nginx 的 Log file 在 var/log/nginx/裡面，Nginx 的 log 可以自訂格式，但有預設的格式：
 `'$remote_addr - $remote_user [$time_local] ' '“$request”$status $body_bytes_sent' '“$http_referer”“$http_user_agent”';`
 
 從 access log 取出一條來看：
 `140.119.235.6 - - [14/Oct/2024:05:15:52 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36    "`
-`$remote_addr` = `140.119.235.6`    
-`$remote_user` = `-`    
-`[$time_local]` = `[14/Oct/2024:05:15:52 +0000]`    
-`“$request” $status $body_bytes_sent` = `"GET / HTTP/1.1" 304 0 "-"`    
-`"$http_referer”` = `"-"`
-`“$http_user_agent”` = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36`
+
+- `$remote_addr` = `140.119.235.6`    
+- `$remote_user` = `-`    
+- `[$time_local]` = `[14/Oct/2024:05:15:52 +0000]`    
+- `“$request” $status $body_bytes_sent` = `"GET / HTTP/1.1" 304 0 "-"`    
+- `"$http_referer”` = `"-"`
+- `“$http_user_agent”` = `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36`
 
 
 
 
-**10.  其他你在過程中遭遇的問題，有找到解答就記錄下來，沒有可以把問題放著，下次上課討論。如果沒有遇到任何問題，也可以回答「無」**
-*主要時間花比較多的問題：*
-步驟1, 2
-Q1. `ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name` 連不上去
-A1. 在這個環節對於security group 不太熟悉，不確定是 group 設錯還是其他，查了 ip ，建立 instance 的資料，最後發現是 .pem 權限不夠
+**10.  其他你在過程中遭遇的問題，有找到解答就記錄下來，沒有可以把問題放著，下次上課討論。如果沒有遇到任何問題，也可以回答「無」**  
+*主要時間花比較多的問題：*  
+步驟1, 2  
+Q1. `ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name` 連不上去  
+A1. 在這個環節對於security group 不太熟悉，不確定是 group 設錯還是其他，查了 ip ，建立 instance 的資料，最後發現是 .pem 權限不夠  
 
-步驟4, 5
-Q2. 不知道要如何啟動nginx
-A2. `systemctl` 以及 `service` 指令有很大的用處
+步驟4, 5  
+Q2. 不知道要如何啟動nginx  
+A2. `systemctl` 以及 `service` 指令有很大的用處  
 
-步驟9
-Q3. proxy 到 Express Server
-A3. 
+步驟9  
+Q3. proxy 到 Express Server  
+A3.  
 - 首先查了要怎麼改 nginx -> `/etc/nginx` 裡面
 - 需要改哪裡？ -> `/etc/nginx/sites-enabled`
 - 怎麼改？ -> 裡面有個 default 檔案可以參考，配合[官方文檔新手教學](https://nginx.org/en/docs/beginners_guide.html)服用，出現    error 直接喂 google
