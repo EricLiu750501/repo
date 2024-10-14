@@ -116,6 +116,19 @@ A3.
 - 怎麼改？ -> 裡面有個 default 檔案可以參考，配合[官方文檔新手教學](https://nginx.org/en/docs/beginners_guide.html)服用，出現    error 直接喂 google
 - 改了 config 沒有 proxy 到 express server -> 因為 listen 80 和 default 的 listen 80 重疊了，所以不會顯示，把 default 的改掉就好了
 
+
+**Linux 檔案目錄結構，觀看影片 [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)  或其他資料，試著回答:**   
+  - /etc 是什麼的縮寫？這裡通常都放哪些檔案？   
+    - etc 是 editabe text config 所以通常都放 config 文件，例如/etc/nginx/
+  - /var 這裡通常都放哪些檔案？ 
+    - var 會放因系統運行或程式操作而經常改變的資料，例如/var/log
+  - /boot 這裡通常都放哪些檔案？
+    - boot 通常放系統啟動相關的檔案
+  - $PATH 環境變數的作用是什麼？
+    - 簡化指令：照理來說要執行 ls 需要 執行 /bin/ls 但是他會自動找 $PATH 底下有 ls 的指令自動執行
+  - `which` 指令的作用？
+    - which [command] 會回傳在 $PATH/[command] 存在的位置
+
 **11. 列出完成本作業時參考的資料**
 
 #ssh 連到 aws  
