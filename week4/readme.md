@@ -118,49 +118,49 @@ A3.
 
 **11. 列出完成本作業時參考的資料**
 
-#ssh 連到 aws
-https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
-不太知道 `ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name` 的 `instance-user-name` 要填什麼
-https://stackoverflow.com/questions/20779454/how-to-find-the-username-of-the-instance-launched-in-amazon-ec2
-ssh 連不上去
-https://stackoverflow.com/questions/8193768/unprotected-private-key-file-error-using-ssh-into-amazon-ec2-instance-aws
-查詢ip定義與個個數字符號的意義
-https://aws.amazon.com/tw/what-is/cidr/
-https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80
-在 aws 主機上設定 sshkey 與 gituhb 做連結
-https://hackmd.io/@MagicJackTing/BywNwqdTD  
-查詢pm2是什麼
-https://www.npmjs.com/package/pm2
-在操作時對於nginx的疑問
-https://stackoverflow.com/questions/21812360/what-is-the-difference-between-the-sites-enabled-and-sites-available-directo
-在重新執行app.js時發現port被佔用了
-https://andy6804tw.github.io/2018/02/09/kill-port/
-**nginx操作時很常看**
-https://nginx.org/en/docs/beginners_guide.html
-https://github.com/nginx/nginx
-同步與非同步是什麼？
-https://www.thegeekstuff.com/2013/11/nginx-vs-apache/
+#ssh 連到 aws  
+https://docs.aws.amazon.com/zh_tw/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html  
+不太知道 `ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name` 的 `instance-user-name` 要填什麼  
+https://stackoverflow.com/questions/20779454/how-to-find-the-username-of-the-instance-launched-in-amazon-ec2  
+ssh 連不上去  
+https://stackoverflow.com/questions/8193768/unprotected-private-key-file-error-using-ssh-into-amazon-ec2-instance-aws  
+查詢ip定義與個個數字符號的意義  
+https://aws.amazon.com/tw/what-is/cidr/  
+https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80  
+在 aws 主機上設定 sshkey 與 gituhb 做連結  
+https://hackmd.io/@MagicJackTing/BywNwqdTD   
+查詢pm2是什麼  
+https://www.npmjs.com/package/pm2  
+在操作時對於nginx的疑問  
+https://stackoverflow.com/questions/21812360/what-is-the-difference-between-the-sites-enabled-and-sites-available-directo  
+在重新執行app.js時發現port被佔用了  
+https://andy6804tw.github.io/2018/02/09/kill-port/  
+**nginx操作時很常看**  
+https://nginx.org/en/docs/beginners_guide.html  
+https://github.com/nginx/nginx  
+同步與非同步是什麼？  
+https://www.thegeekstuff.com/2013/11/nginx-vs-apache/  
 
-操作時產生的 error 直接餵給 google
-https://blog.csdn.net/weixin_41585557/article/details/83413610
-https://stackoverflow.com/questions/66028707/unknown-directive-location-inside-server-block
-https://blog.csdn.net/shangcunshanfu/article/details/120515889
-https://stackoverflow.com/questions/20392741/nginx-errorlocation-directive-is-not-allowed-here-in-etc-nginx-nginx-conf76
+操作時產生的 error 直接餵給 google  
+https://blog.csdn.net/weixin_41585557/article/details/83413610  
+https://stackoverflow.com/questions/66028707/unknown-directive-location-inside-server-block  
+https://blog.csdn.net/shangcunshanfu/article/details/120515889  
+https://stackoverflow.com/questions/20392741/nginx-errorlocation-directive-is-not-allowed-here-in-etc-nginx-nginx-conf76  
 
-步驟9相關資料查詢
-https://learn.microsoft.com/zh-tw/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-2-install-nginx-configure-it-reverse-proxy
+步驟9相關資料查詢  
+https://learn.microsoft.com/zh-tw/troubleshoot/developer/webapps/aspnetcore/practice-troubleshoot-linux/2-2-install-nginx-configure-it-reverse-proxy  
 
-啟用 nginx
-https://ithelp.ithome.com.tw/articles/10205953
-https://phoenixnap.com/kb/nginx-start-stop-restart
+啟用 nginx  
+https://ithelp.ithome.com.tw/articles/10205953  
+https://phoenixnap.com/kb/nginx-start-stop-restart  
 
-security group
-https://ithelp.ithome.com.tw/articles/10237747
-建立instance
-https://5xruby.com/zh/articles/starting-ec2-instance
+security group  
+https://ithelp.ithome.com.tw/articles/10237747  
+建立instance  
+https://5xruby.com/zh/articles/starting-ec2-instance  
 
-Proxy
-https://www.youtube.com/watch?v=4NB0NDtOwIQ
+Proxy  
+https://www.youtube.com/watch?v=4NB0NDtOwIQ  
 
 
 
