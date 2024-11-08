@@ -104,6 +104,10 @@ Nov 08 09:09:20 ip-172-31-42-23 nginx[1515]: nginx: [emerg] bind() to 0.0.0.0:80
 ![alt text](img/image-8.png)
 
 
+
+最後在瀏覽器開啟 EC2 的 public IP 來確認修復完成        
+![alt text](img/image-end.png)
+
 ## 心得     
 這次的Troble Shooting Lab 我覺得蠻好玩的，很像在玩解謎遊戲，根據線索一步步解開謎題，在途中也翻了之前寫 week4 的作業，也終於了解為何老師說「一定要自己手動操作一次」，在這次作業也有碰到之前碰過的問題 (Port 佔用)，雖然印象不深，但還是依稀記得自己有解決過他，碰過就是比較印象深刻。
 
