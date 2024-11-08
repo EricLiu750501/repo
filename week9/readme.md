@@ -28,8 +28,7 @@
 
 
 
-### Start
-# 我重生了
+### Start   
 首先：執行`curl localhost `         
 ![alt text](img/image-10.png)
 
@@ -71,7 +70,7 @@ Nov 08 09:09:20 ip-172-31-42-23 nginx[1515]: nginx: [emerg] bind() to 0.0.0.0:80
 ![alt text](img/image-19.png)
 
 問了 gpt 說可能是防火牆的問題，使用 `sudo iptables -L -n -v` 檢查，結果發現 port80 被 reject 了   
-這一步最跳，目前我還沒發現次問題的線索在哪邊    
+這一步最跳，目前我還沒發現次問題的線索在哪邊，也或許是看到這個就要想到是不是防火牆的可能性    
 ![alt text](img/image-20.png)
 
 重新配置防火牆  
