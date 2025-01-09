@@ -1,5 +1,5 @@
 **1. 在 Readme 中提供 instance 的 public IP，我會連線過去檢查，所以要保持主機是一直在啟動中**  
-[http://3.106.200.164/](http://3.106.200.164/)  
+[http://52.62.117.91/](http://52.62.117.91/)  
  
 **2. 什麼是 instance type?**  
 instance type 是執行 instance 時所使用的主機硬體
